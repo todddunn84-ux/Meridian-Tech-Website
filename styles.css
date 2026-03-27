@@ -183,7 +183,7 @@ img { max-width: 100%; }
 .pricing-note { text-align: center; font-size: 14px; color: #666; margin-top: 28px; }
 .pricing-note a { color: #1a3a5c; font-weight: 600; }
 
-/* === PORTFOLIO === *//
+/* === PORTFOLIO === */
 .portfolio-item {
     background: #fff; border: 1px solid #e8e8ee; border-radius: 16px;
     padding: 36px 32px; margin-bottom: 24px;
