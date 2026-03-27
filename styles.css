@@ -132,16 +132,23 @@ img { max-width: 100%; }
 .service p { font-size: 14px; color: #666; line-height: 1.65; }
 
 /* === WHY US === */
-.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 40px; }
-.why-item { text-align: center; }
-.why-number {
-    font-size: 36px; font-weight: 700;
-    background: linear-gradient(135deg, #4f8cf7, #1a3a5c);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    margin-bottom: 12px;
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; }
+.why-item {
+    text-align: center;
+    background: #fff;
+    border: 1px solid #e8e8ee;
+    border-radius: 14px;
+    padding: 36px 28px;
+    transition: all 0.3s ease;
 }
-.why-item h4 { font-size: 17px; font-weight: 600; color: #1a3a5c; margin-bottom: 8px; }
-.why-item p { font-size: 14px; color: #666; line-height: 1.65; }
+.why-item:hover { box-shadow: 0 10px 32px rgba(0,0,0,0.08); transform: translateY(-4px); }
+.why-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+    display: block;
+}
+.why-item h4 { font-size: 18px; font-weight: 700; color: #1a3a5c; margin-bottom: 10px; }
+.why-item p { font-size: 14px; color: #666; line-height: 1.7; }
 
 /* === PORTFOLIO === */
 .portfolio-item {
