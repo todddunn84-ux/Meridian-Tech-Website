@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meridian Tech LLC — AI-Powered Software for Small Businesses</title>
+    <meta name="description" content="Meridian Tech LLC builds AI-powered software platforms and developer tools for small businesses. Based in Cheyenne, WY.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+    <div class="container nav-inner">
+        <a href="#" class="logo">Meridian Tech</a>
+        <div class="nav-links">
+            <a href="#products">Products</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact" class="btn btn-sm">Contact</a>
+        </div>
+        <button class="mobile-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <h1>AI-Powered Software<br>for Small Businesses</h1>
+        <p class="hero-sub">We design, build, and deploy production-grade platforms — from multi-tenant SaaS to real-time interactive systems — with practical AI at the core.</p>
+        <div class="hero-actions">
+            <a href="#products" class="btn btn-primary">See Our Products</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="section">
+    <div class="container">
+        <h2 class="section-title fade-in">Products</h2>
+        <div class="cards">
+
+            <div class="card fade-in">
+                <div class="card-icon">&#128197;</div>
+                <h3>Smart Scheduler</h3>
+                <p class="card-tag">AI-Powered Appointment Booking</p>
+                <p>A multi-tenant SaaS platform that gives small businesses an AI scheduling assistant. Customers book through natural conversation via chat or phone call.</p>
+                <div class="card-tech">Python &bull; FastAPI &bull; OpenAI GPT-4o &bull; Twilio &bull; Stripe &bull; AWS</div>
+                <a href="https://ai-scheduling-agent.com" class="btn btn-sm" target="_blank">Visit Site &rarr;</a>
+            </div>
+
+            <div class="card fade-in">
+                <div class="card-icon">&#127918;</div>
+                <h3>Wager Up</h3>
+                <p class="card-tag">Skill-Based Wagering Platform</p>
+                <p>Real-time wagering for skill-based competitions across golf, esports, basketball, football, darts, and bowling. Live game state sync and integrated payments.</p>
+                <div class="card-tech">React 19 &bull; Tailwind CSS &bull; FastAPI &bull; MongoDB &bull; Socket.IO &bull; Stripe</div>
+            </div>
+
+            <div class="card fade-in">
+                <div class="card-icon">&#9889;</div>
+                <h3>Token Saver</h3>
+                <p class="card-tag">AI Prompt Optimization — Chrome Extension</p>
+                <p>Analyzes AI prompts for token efficiency across ChatGPT, Claude, and Gemini. Real-time counting, scoring, and one-click optimization.</p>
+                <div class="card-tech">JavaScript &bull; Chrome Extension (MV3) &bull; js-tiktoken &bull; Webpack</div>
+                <a href="https://todddunn84-ux.github.io/Token-Saver/" class="btn btn-sm" target="_blank">Try Demo &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section section-alt">
+    <div class="container">
+        <h2 class="section-title fade-in">Services</h2>
+        <p class="section-desc fade-in">We help small businesses and startups bring ideas to life with modern technology.</p>
+        <div class="services-grid">
+            <div class="service fade-in">
+                <h4>Custom Software Development</h4>
+                <p>Full-stack web applications built with Python, React, and FastAPI. From MVP to production.</p>
+            </div>
+            <div class="service fade-in">
+                <h4>AI Integration</h4>
+                <p>Add conversational AI, voice assistants, and intelligent automation to your existing business workflows.</p>
+            </div>
+            <div class="service fade-in">
+                <h4>Cloud Deployment &amp; DevOps</h4>
+                <p>AWS infrastructure with CI/CD pipelines, Infrastructure as Code, and production-grade deployments.</p>
+            </div>
+            <div class="service fade-in">
+                <h4>SaaS Platform Development</h4>
+                <p>Multi-tenant architectures with billing integration, tenant isolation, and scalable infrastructure.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <div class="container">
+        <h2 class="section-title fade-in">About</h2>
+        <div class="about-content fade-in">
+            <p>
+                Meridian Tech LLC is a software company based in Cheyenne, Wyoming, founded in 2025.
+                We build AI-powered tools and platforms that help small businesses work smarter —
+                from automated scheduling to real-time interactive systems.
+            </p>
+            <p>
+                Founded by Todd (Logan) Dunn, a full-stack developer and operations leader with 7+ years
+                at Amazon advancing from Tier 1 warehouse associate to Senior Program Manager. This unique
+                background combines hands-on software engineering with deep expertise in high-volume
+                operations, logistics, and data-driven decision making.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section section-alt">
+    <div class="container">
+        <h2 class="section-title fade-in">Get in Touch</h2>
+        <div class="contact-info fade-in">
+            <p>Have a project in mind? Let's talk.</p>
+            <a href="mailto:meridiantechllc@meridian-hq.com" class="contact-email">meridiantechllc@meridian-hq.com</a>
+            <p class="contact-location">Cheyenne, WY</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Meridian Tech LLC. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Mobile nav toggle
+    const toggle = document.querySelector('.mobile-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+    // Smooth scroll + close mobile nav
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            e.preventDefault();
+            const target = document.querySelector(a.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+            navLinks.classList.remove('open');
+        });
+    });
+
+    // Nav shadow on scroll
+    const nav = document.querySelector('.nav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Scroll-triggered fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                // Stagger the animations slightly
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, i * 100);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
