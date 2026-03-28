@@ -55,6 +55,7 @@ Multi-tenant SaaS platform with AI conversational scheduling, Twilio voice suppo
 ### Wager Up — Skill-Based Wagering Platform
 Real-time wagering platform for golf, esports, basketball, football, darts, and bowling.
 - **Stack:** React 19, Tailwind CSS, Framer Motion, FastAPI, MongoDB, Socket.IO, Stripe
+- **Live:** [wagerupapp.com](https://wagerupapp.com)
 
 ### Token Saver — AI Prompt Optimization
 Chrome extension for real-time token counting, efficiency scoring, and one-click prompt optimization.
