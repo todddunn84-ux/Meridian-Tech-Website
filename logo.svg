@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f1b2d"/>
+      <stop offset="100%" stop-color="#1a3a5c"/>
+    </linearGradient>
+    <linearGradient id="letter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f8cf7"/>
+      <stop offset="60%" stop-color="#a8ccff"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4f8cf7"/>
+      <stop offset="100%" stop-color="#2d5a8e"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background with rounded corners -->
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+
+  <!-- Subtle inner border -->
+  <rect x="8" y="8" width="496" height="496" rx="90" fill="none" stroke="rgba(79,140,247,0.12)" stroke-width="2"/>
+
+  <!-- Accent line at top -->
+  <rect x="128" y="72" width="256" height="4" rx="2" fill="url(#accent)" opacity="0.6"/>
+
+  <!-- M letterform - custom geometric paths for a cleaner look -->
+  <g filter="url(#glow)">
+    <path d="M 136 380 L 136 168 L 196 168 L 256 280 L 316 168 L 376 168 L 376 380 L 328 380 L 328 252 L 272 356 L 240 356 L 184 252 L 184 380 Z"
+          fill="url(#letter)"/>
+  </g>
+
+  <!-- Accent line at bottom -->
+  <rect x="128" y="420" width="256" height="4" rx="2" fill="url(#accent)" opacity="0.6"/>
+
+  <!-- Subtle corner dots -->
+  <circle cx="96" cy="96" r="4" fill="#4f8cf7" opacity="0.3"/>
+  <circle cx="416" cy="96" r="4" fill="#4f8cf7" opacity="0.3"/>
+  <circle cx="96" cy="416" r="4" fill="#4f8cf7" opacity="0.3"/>
+  <circle cx="416" cy="416" r="4" fill="#4f8cf7" opacity="0.3"/>
+</svg>
