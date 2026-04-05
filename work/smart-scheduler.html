@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Scheduler — AI-Powered Appointment Booking SaaS | Meridian Tech Case Study</title>
+    <meta name="description" content="How we built a production multi-tenant SaaS booking platform with AI scheduling, Twilio voice, Stripe billing, and AWS deployment. Full case study.">
+    <link rel="canonical" href="https://meridian-hq.com/work/smart-scheduler.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../pages.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+<nav class="nav"><div class="container nav-inner"><a href="../index.html" class="logo">Meridian Tech</a><div class="nav-links"><a href="../index.html#services">Services</a><a href="../index.html#pricing">Pricing</a><a href="../index.html#work">Our Work</a><a href="../index.html#about">About</a><a href="../index.html#contact" class="btn btn-sm">Free Consultation</a></div><button class="mobile-toggle" aria-label="Toggle menu">&#9776;</button></div></nav>
+
+<section class="page-hero">
+    <div class="container">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#work">Our Work</a> / Smart Scheduler</div>
+        <h1>Smart Scheduler</h1>
+        <p>A production multi-tenant SaaS platform where small businesses get their own AI scheduling assistant. Customers book appointments through natural conversation via chat or phone.</p>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="stats-row">
+            <div class="stat"><div class="stat-number">3</div><div class="stat-label">Subscription Plans</div></div>
+            <div class="stat"><div class="stat-number">24/7</div><div class="stat-label">AI Availability</div></div>
+            <div class="stat"><div class="stat-number">100%</div><div class="stat-label">Tenant Isolation</div></div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section section-alt">
+    <div class="container">
+        <div class="two-col">
+            <div>
+                <h2>The Problem</h2>
+                <p>Small businesses — dental clinics, salons, consultants — lose customers because they can't answer the phone during busy hours. Missed calls mean missed appointments mean lost revenue.</p>
+                <p>Existing booking tools are either too expensive, too complex, or don't offer the conversational experience customers want. Most require customers to navigate a rigid form instead of just saying "I need an appointment Thursday afternoon."</p>
+            </div>
+            <div>
+                <h2>The Solution</h2>
+                <p>Smart Scheduler gives every business their own AI booking assistant that handles appointments through natural conversation — via a chat widget on their website or over the phone via Twilio.</p>
+                <p>Business owners sign up, configure their hours and services, choose a plan, and get a booking page they can share with customers. The AI handles the rest — checking availability, booking slots, sending reminders, and managing cancellations with automatic waitlist promotion.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <h2>Architecture & Technology</h2>
+        <p>This is a real production system running on AWS, handling real customer interactions.</p>
+        <div class="architecture-grid">
+            <div class="arch-item"><div class="icon">🤖</div><h4>OpenAI GPT-4o</h4><p>AI agent with function calling for real actions</p></div>
+            <div class="arch-item"><div class="icon">📞</div><h4>Twilio Voice</h4><p>Phone-based booking with speech-to-text</p></div>
+            <div class="arch-item"><div class="icon">💳</div><h4>Stripe Billing</h4><p>3 subscription tiers with billing portal</p></div>
+            <div class="arch-item"><div class="icon">🐍</div><h4>Python + FastAPI</h4><p>Async backend with middleware-based auth</p></div>
+            <div class="arch-item"><div class="icon">🗄️</div><h4>SQLite (per-tenant)</h4><p>Complete data isolation between businesses</p></div>
+            <div class="arch-item"><div class="icon">☁️</div><h4>AWS ECS Fargate</h4><p>Serverless containers with EFS persistence</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section section-alt">
+    <div class="container">
+        <h2>How Multi-Tenancy Works</h2>
+        <div class="two-col">
+            <div>
+                <h3>Tenant Isolation</h3>
+                <p>Every business that signs up gets their own SQLite database stored on AWS EFS. No business can ever see another business's data — it's physically separated at the file level.</p>
+                <p>Middleware automatically resolves which tenant a request belongs to — either from the authenticated session (dashboard) or from the URL slug (public booking widget).</p>
+            </div>
+            <div>
+                <h3>Subscription Billing</h3>
+                <p>Three plans (Starter $49.99, Standard $99.99, Premium $150.99) with different appointment limits and feature access. Stripe handles all payment processing, and webhooks keep subscription status in sync.</p>
+                <p>Plan limits are enforced server-side — the AI agent checks appointment counts before booking, and feature gating controls access to waitlist management and voice booking.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <h2>Security & Reliability</h2>
+        <div class="security-grid">
+            <div class="security-item"><div class="check">✓</div><div><h4>Session-Based Auth</h4><p>Httponly cookies with bcrypt password hashing and session expiry</p></div></div>
+            <div class="security-item"><div class="check">✓</div><div><h4>Stripe Webhook Verification</h4><p>Signature verification with idempotency tracking prevents duplicate processing</p></div></div>
+            <div class="security-item"><div class="check">✓</div><div><h4>Rate Limiting</h4><p>Per-endpoint rate limits on auth, chat, and booking to prevent abuse</p></div></div>
+            <div class="security-item"><div class="check">✓</div><div><h4>Security Headers</h4><p>HSTS, X-Frame-Options, Content-Type-Options, Referrer-Policy</p></div></div>
+            <div class="security-item"><div class="check">✓</div><div><h4>Non-Root Containers</h4><p>Docker containers run as unprivileged user with minimal attack surface</p></div></div>
+            <div class="security-item"><div class="check">✓</div><div><h4>Automated CI/CD</h4><p>GitHub Actions builds, tests, and deploys on every push to main</p></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section section-alt">
+    <div class="container" style="text-align:center;">
+        <h2>See It Live</h2>
+        <p style="color:#666;max-width:480px;margin:0 auto 24px;">Smart Scheduler is live and accepting customers. Try the booking experience yourself.</p>
+        <a href="https://ai-scheduling-agent.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Visit Smart Scheduler &rarr;</a>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="inline-cta">
+            <h2>Want Something Like This?</h2>
+            <p>We can build a SaaS platform, AI integration, or custom tool for your business using the same technology. Let's talk.</p>
+            <a href="mailto:meridiantechllc@meridian-hq.com" class="btn btn-primary" style="background:#fff;color:#1a3a5c;">Get a Free Consultation</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer"><div class="container"><p>&copy; 2025–2026 Meridian Tech LLC. All rights reserved.</p></div></footer>
+<script>const toggle=document.querySelector('.mobile-toggle');const navLinks=document.querySelector('.nav-links');toggle.addEventListener('click',()=>navLinks.classList.toggle('open'));const nav=document.querySelector('.nav');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>20));</script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wager Up — Real-Time Skill-Based Wagering Platform | Meridian Tech Case Study</title>
+    <meta name="description" content="How we built a real-time wagering platform with React 19, FastAPI, Socket.IO, Stripe payments, and Google OAuth. Full architecture and security breakdown.">
+    <link rel="canonical" href="https://meridian-hq.com/work/wager-up.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../pages.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+<nav class="nav"><div class="container nav-inner"><a href="../index.html" class="logo">Meridian Tech</a><div class="nav-links"><a href="../index.html#services">Services</a><a href="../index.html#pricing">Pricing</a><a href="../index.html#work">Our Work</a><a href="../index.html#about">About</a><a href="../index.html#contact" class="btn btn-sm">Free Consultation</a></div><button class="mobile-toggle" aria-label="Toggle menu">&#9776;</button></div></nav>
+
+<section class="page-hero">
+    <div class="container">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#work">Our Work</a> / Wager Up</div>
+        <h1>Wager Up</h1>
+        <p>A real-time skill-based wagering platform for golf, esports, basketball, football, darts, and bowling — with live game state sync, integrated payments, and a modern animated UI.</p>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="stats-row">
+            <div class="stat"><div class="stat-number">6</div><div class="stat-label">Game Categories</div></div>
+            <div class="stat"><div class="stat-number">18</div><div class="stat-label">Game Types</div></div>
+            <div class="stat"><div class="stat-number">Real-Time</div><div class="stat-label">WebSocket Sync</div></div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section section-alt">
+    <div class="container">
+        <div class="two-col">
+            <div>
+                <h2>The Concept</h2>
+                <p>Wager Up is a platform where players compete head-to-head in skill-based competitions with real money on the line. Unlike gambling, every outcome is determined by player skill — you're betting on your own performance.</p>
+                <p>Players create matches, set wager amounts, and compete across 18 different game types in 6 categories. The platform handles match creation, opponent matching, real-time chat, wallet management, and automatic payout to winners.</p>
+            </div>
+            <div>
+                <h2>Key Features</h2>
+                <ul>
+                    <li>6 game categories: Golf, Video Games, Basketball, Football, Darts, Bowling</li>
+                    <li>Real-time match updates via WebSocket (Socket.IO)</li>
+                    <li>Digital wallet with hold/capture/release pattern for wagers</li>
+                    <li>Stripe Checkout for deposits with webhook verification</li>
+                    <li>Google OAuth authentication</li>
+                    <li>In-match chat with message persistence</li>
+                    <li>Leaderboard with win/loss tracking</li>
+                    <li>Age verification and terms acceptance gate</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <h2>Architecture & Technology</h2>
+        <div class="architecture-grid">
+            <div class="arch-item"><div class="icon">⚛️</div><h4>React 19</h4><p>Modern frontend with Tailwind CSS and Framer Motion</p></div>
+            <div class="arch-item"><div class="icon">🐍</div><h4>FastAPI</h4><p>Async Python backend with REST API</p></div>
+            <div class="arch-item"><div class="icon">🔌</div><h4>Socket.IO</h4><p>Real-time bidirectional communication</p></div>
+            <div class="arch-item"><div class="icon">💳</div><h4>Stripe</h4><p>Deposits, webhook verification, idempotent processing</p></div>
+            <div class="arch-item"><div class="icon">🔐</div><h4>Google OAuth</h4><p>Secure authentication with session cookies</p></div>
+            <div class="arch-item"><div class="icon">☁️</div><h4>AWS ECS Fargate</h4><p>Containerized deployment with CI/CD</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section section-alt">
+    <div class="container">
+        <h2>How the Wallet System Works</h2>
+        <div class="two-col">
+            <div>
+                <h3>Hold / Capture / Release</h3>
+                <p>When a player creates or joins a match, the wager amount is placed on hold — deducted from their available balance but not yet spent. This prevents double-spending even under concurrent requests.</p>
+                <p>When the match completes, holds are captured (money leaves the wallet) and the winner receives the total pot. If a match is cancelled, holds are released and funds return to available balance.</p>
+            </div>
+            <div>
+                <h3>Race Condition Protection</h3>
+                <p>Financial operations use SQLite's <code>BEGIN IMMEDIATE</code> to acquire write locks before balance checks. This prevents two concurrent requests from both passing a balance check before either deducts.</p>
+                <p>Match joining uses atomic UPDATE statements with WHERE conditions — if two players try to join the same match simultaneously, only one succeeds. The other gets a clean error message.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <h2>Security & Reliability</h2>
+        <div class="security-grid">
+            <div class="security-item"><div class="check">✓</div><div><h4>Google OAuth 2.0</h4><p>Secure authentication with proxy header support behind ALB</p></div></div>
+            <div class="security-item"><div class="check">✓</div><div><h4>Atomic Wallet Operations</h4><p>BEGIN IMMEDIATE transactions prevent double-spend race conditions</p></div></div>
+            <div class="security-item"><div class="check">✓</div><div><h4>Rate Limiting</h4><p>Per-endpoint limits on auth, deposits, match creation, and result reporting</p></div></div>
+            <div class="security-item"><div class="check">✓</div><div><h4>Security Headers</h4><p>HSTS, X-Frame-Options, CSP, Referrer-Policy on all responses</p></div></div>
+            <div class="security-item"><div class="check">✓</div><div><h4>Locked CORS</h4><p>Origin-restricted CORS on both HTTP and WebSocket connections</p></div></div>
+            <div class="security-item"><div class="check">✓</div><div><h4>Input Validation</h4><p>Wager amount limits, message length caps, and Pydantic request validation</p></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section section-alt">
+    <div class="container" style="text-align:center;">
+        <h2>See It Live</h2>
+        <p style="color:#666;max-width:480px;margin:0 auto 24px;">Wager Up is live. Check out the platform and see the UI in action.</p>
+        <a href="https://wagerupapp.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Visit Wager Up &rarr;</a>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="inline-cta">
+            <h2>Need a Real-Time Platform?</h2>
+            <p>We build interactive, real-time applications with WebSockets, payments, and modern UI. Let's talk about your project.</p>
+            <a href="mailto:meridiantechllc@meridian-hq.com" class="btn btn-primary" style="background:#fff;color:#1a3a5c;">Get a Free Consultation</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer"><div class="container"><p>&copy; 2025–2026 Meridian Tech LLC. All rights reserved.</p></div></footer>
+<script>const toggle=document.querySelector('.mobile-toggle');const navLinks=document.querySelector('.nav-links');toggle.addEventListener('click',()=>navLinks.classList.toggle('open'));const nav=document.querySelector('.nav');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>20));</script>
+</body>
+</html>

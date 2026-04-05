@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://meridian-hq.com/</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://meridian-hq.com/</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://meridian-hq.com/services/custom-software.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://meridian-hq.com/services/ai-integration.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://meridian-hq.com/services/cloud-devops.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://meridian-hq.com/services/saas-development.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://meridian-hq.com/services/business-automation.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://meridian-hq.com/services/dashboards-analytics.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://meridian-hq.com/work/smart-scheduler.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://meridian-hq.com/work/wager-up.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://meridian-hq.com/work/token-saver.html</loc><lastmod>2026-04-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 </urlset>

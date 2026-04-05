@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Saver — AI Prompt Optimization Chrome Extension | Meridian Tech Case Study</title>
+    <meta name="description" content="How we built a Chrome extension that analyzes and optimizes AI prompts for token efficiency across ChatGPT, Claude, and Gemini. Full case study.">
+    <link rel="canonical" href="https://meridian-hq.com/work/token-saver.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../pages.css">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+<nav class="nav"><div class="container nav-inner"><a href="../index.html" class="logo">Meridian Tech</a><div class="nav-links"><a href="../index.html#services">Services</a><a href="../index.html#pricing">Pricing</a><a href="../index.html#work">Our Work</a><a href="../index.html#about">About</a><a href="../index.html#contact" class="btn btn-sm">Free Consultation</a></div><button class="mobile-toggle" aria-label="Toggle menu">&#9776;</button></div></nav>
+
+<section class="page-hero">
+    <div class="container">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / <a href="../index.html#work">Our Work</a> / Token Saver</div>
+        <h1>Token Saver</h1>
+        <p>A Chrome extension that analyzes AI prompts for token efficiency across ChatGPT, Claude, and Gemini — helping users reduce costs and write better prompts.</p>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="two-col">
+            <div>
+                <h2>The Problem</h2>
+                <p>AI tools charge by the token. Most users have no idea how many tokens their prompts use, whether they're being efficient, or how much they're spending. Verbose prompts waste money and often produce worse results than concise ones.</p>
+                <p>There was no simple tool that sat inside the browser and gave real-time feedback on prompt quality before you hit send.</p>
+            </div>
+            <div>
+                <h2>The Solution</h2>
+                <p>Token Saver is a Chrome extension that analyzes prompts in real-time as you type. It counts tokens using the same tokenizer OpenAI uses (tiktoken), scores efficiency, identifies waste, and offers one-click optimization — either rule-based or GPT-powered rewrites.</p>
+                <p>It works across ChatGPT, Claude, and Gemini without any configuration. Just install and start writing better prompts.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section section-alt">
+    <div class="container">
+        <h2>Key Features</h2>
+        <div class="use-case-grid">
+            <div class="use-case">
+                <div class="icon">🔢</div>
+                <h4>Real-Time Token Counting</h4>
+                <p>See exactly how many tokens your prompt uses as you type, powered by js-tiktoken — the same tokenizer OpenAI uses internally.</p>
+            </div>
+            <div class="use-case">
+                <div class="icon">📊</div>
+                <h4>Efficiency Scoring</h4>
+                <p>Get a score from 0-100 based on token density, redundancy, and clarity. See exactly where your prompt is wasting tokens.</p>
+            </div>
+            <div class="use-case">
+                <div class="icon">⚡</div>
+                <h4>One-Click Optimization</h4>
+                <p>Optimize prompts instantly with rule-based compression or optional GPT-powered rewrites that maintain meaning while reducing tokens.</p>
+            </div>
+            <div class="use-case">
+                <div class="icon">📈</div>
+                <h4>Analysis History</h4>
+                <p>Track your prompt efficiency over time with Chrome storage-based history. Export and import analysis data for record-keeping.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <h2>Architecture & Technology</h2>
+        <div class="architecture-grid">
+            <div class="arch-item"><div class="icon">🧩</div><h4>Manifest V3</h4><p>Latest Chrome extension standard</p></div>
+            <div class="arch-item"><div class="icon">📦</div><h4>Webpack</h4><p>Module bundling and build optimization</p></div>
+            <div class="arch-item"><div class="icon">🔤</div><h4>js-tiktoken</h4><p>OpenAI's tokenizer running client-side</p></div>
+            <div class="arch-item"><div class="icon">🤖</div><h4>OpenAI API</h4><p>Optional GPT-powered prompt rewrites</p></div>
+            <div class="arch-item"><div class="icon">🧪</div><h4>Jest</h4><p>Full test suite for reliability</p></div>
+            <div class="arch-item"><div class="icon">💾</div><h4>Chrome Storage</h4><p>Local analysis history with export/import</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section section-alt">
+    <div class="container" style="text-align:center;">
+        <h2>Try It Yourself</h2>
+        <p style="color:#666;max-width:480px;margin:0 auto 24px;">Token Saver has a live demo you can try right now — no installation needed.</p>
+        <a href="https://todddunn84-ux.github.io/Token-Saver/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Try Live Demo &rarr;</a>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="container">
+        <div class="inline-cta">
+            <h2>Need a Chrome Extension or Developer Tool?</h2>
+            <p>We build browser extensions, developer tools, and productivity software. Tell us what you need.</p>
+            <a href="mailto:meridiantechllc@meridian-hq.com" class="btn btn-primary" style="background:#fff;color:#1a3a5c;">Get a Free Consultation</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer"><div class="container"><p>&copy; 2025–2026 Meridian Tech LLC. All rights reserved.</p></div></footer>
+<script>const toggle=document.querySelector('.mobile-toggle');const navLinks=document.querySelector('.nav-links');toggle.addEventListener('click',()=>navLinks.classList.toggle('open'));const nav=document.querySelector('.nav');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>20));</script>
+</body>
+</html>
