@@ -3,14 +3,14 @@
 /* Page hero - smaller than homepage */
 .page-hero {
     padding: 140px 0 60px;
-    background: linear-gradient(135deg, #0f1b2d 0%, #1a3a5c 40%, #2d5a8e 70%, #4f8cf7 100%);
+    background: linear-gradient(135deg, #0d1b2a 0%, #1b2838 40%, #6366f1 100%);
     color: #fff;
     position: relative;
     overflow: hidden;
 }
 .page-hero::before {
     content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
-    background: radial-gradient(circle at 30% 50%, rgba(79,140,247,0.15) 0%, transparent 50%);
+    background: radial-gradient(circle at 30% 50%, rgba(99,102,241,0.2) 0%, transparent 50%);
 }
 .page-hero .container { position: relative; z-index: 1; }
 .page-hero h1 { font-size: 42px; font-weight: 700; margin-bottom: 16px; }
@@ -21,8 +21,8 @@
 
 /* Content sections */
 .content-section { padding: 80px 0; }
-.content-section h2 { font-size: 28px; font-weight: 700; color: #1a1a2e; margin-bottom: 16px; }
-.content-section h3 { font-size: 20px; font-weight: 600; color: #1a3a5c; margin-bottom: 10px; }
+.content-section h2 { font-size: 28px; font-weight: 700; color: #0d1b2a; margin-bottom: 16px; }
+.content-section h3 { font-size: 20px; font-weight: 600; color: #6366f1; margin-bottom: 10px; }
 .content-section p { font-size: 16px; color: #555; line-height: 1.75; margin-bottom: 16px; }
 .content-section ul { padding-left: 20px; margin-bottom: 20px; }
 .content-section li { font-size: 15px; color: #555; line-height: 1.7; margin-bottom: 8px; }
@@ -37,7 +37,7 @@
     padding: 28px; transition: all 0.3s ease;
 }
 .use-case:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.07); transform: translateY(-2px); }
-.use-case h4 { font-size: 17px; font-weight: 600; color: #1a3a5c; margin-bottom: 8px; }
+.use-case h4 { font-size: 17px; font-weight: 600; color: #0d1b2a; margin-bottom: 8px; }
 .use-case p { font-size: 14px; color: #666; line-height: 1.65; margin-bottom: 0; }
 .use-case .icon { font-size: 28px; margin-bottom: 10px; }
 
@@ -49,19 +49,19 @@
 }
 .step-number {
     width: 40px; height: 40px; border-radius: 50%;
-    background: linear-gradient(135deg, #1a3a5c, #4f8cf7);
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
     color: #fff; font-weight: 700; font-size: 18px;
     display: flex; align-items: center; justify-content: center;
     margin: 0 auto 12px;
 }
-.step h4 { font-size: 15px; font-weight: 600; color: #1a3a5c; margin-bottom: 6px; }
+.step h4 { font-size: 15px; font-weight: 600; color: #0d1b2a; margin-bottom: 6px; }
 .step p { font-size: 13px; color: #666; margin-bottom: 0; }
 
 /* Tech stack badges */
 .tech-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .tech-badge {
-    background: #f0f4ff; color: #1a3a5c; font-size: 12px; font-weight: 600;
-    padding: 6px 14px; border-radius: 20px; border: 1px solid #d8e2f4;
+    background: #eef0ff; color: #6366f1; font-size: 12px; font-weight: 600;
+    padding: 6px 14px; border-radius: 20px; border: 1px solid #d4d6f9;
 }
 
 /* Case study specific */
@@ -78,7 +78,7 @@
     padding: 20px; text-align: center;
 }
 .arch-item .icon { font-size: 28px; margin-bottom: 8px; }
-.arch-item h4 { font-size: 14px; font-weight: 600; color: #1a3a5c; margin-bottom: 4px; }
+.arch-item h4 { font-size: 14px; font-weight: 600; color: #0d1b2a; margin-bottom: 4px; }
 .arch-item p { font-size: 12px; color: #888; margin-bottom: 0; }
 
 /* Security highlights */
@@ -87,8 +87,8 @@
     display: flex; gap: 12px; align-items: start;
     background: #f7faf7; border: 1px solid #d4e8d4; border-radius: 12px; padding: 16px;
 }
-.security-item .check { color: #00c9a7; font-size: 20px; font-weight: 700; flex-shrink: 0; }
-.security-item h4 { font-size: 14px; font-weight: 600; color: #1a3a5c; margin-bottom: 2px; }
+.security-item .check { color: #06d6a0; font-size: 20px; font-weight: 700; flex-shrink: 0; }
+.security-item h4 { font-size: 14px; font-weight: 600; color: #0d1b2a; margin-bottom: 2px; }
 .security-item p { font-size: 13px; color: #666; margin-bottom: 0; }
 
 /* Stats row */
@@ -97,12 +97,12 @@
     text-align: center; padding: 24px;
     background: #fff; border: 1px solid #e8e8ee; border-radius: 14px;
 }
-.stat-number { font-size: 36px; font-weight: 700; color: #1a3a5c; }
+.stat-number { font-size: 36px; font-weight: 700; color: #6366f1; }
 .stat-label { font-size: 13px; color: #888; margin-top: 4px; }
 
 /* Inline CTA */
 .inline-cta {
-    background: linear-gradient(135deg, #0f1b2d, #1a3a5c);
+    background: linear-gradient(135deg, #0d1b2a, #6366f1);
     border-radius: 16px; padding: 48px; text-align: center; color: #fff; margin-top: 40px;
 }
 .inline-cta h2 { color: #fff; margin-bottom: 12px; }
